@@ -2,14 +2,18 @@ import React, {useState} from 'react';
 import './App.css';
 
 const App = () => {
-
-  var val = "Kiranpal Singh";
-  var check = true;
   
   const  [myName, setMyName ] = useState('Kiranpal Singh');
 
   const changeName = () => {
+    
+    let val = myName;
+    if(val ==="Kiranpal Singh") {
       setMyName("Name replaced");
+    }  
+    else {
+      setMyName("Kiranpal Singh")
+    }
   }
 
   return (
