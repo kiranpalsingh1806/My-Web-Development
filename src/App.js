@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
-import HooksRule from './components/HooksRule';
+import UseStateArray from './components/UseStateArray';
 
 const App = () => {
   return (
     <div>
-      <HooksRule/>
+      <UseStateArray/>
     </div>
   );
 }
