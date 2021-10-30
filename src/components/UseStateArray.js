@@ -4,13 +4,13 @@ const UseStateArray = () => {
 
     const bioData = [
         {
-            id:0, myName:"Kiranpal", age:20
+            id:0, myName:"Tomato", quant:20
         }, {
-            id: 1, myName:"Amanpal", age:17
+            id: 1, myName:"Onion", quant:17
         }, {
-            id:2, myName:"John", age:23
+            id:2, myName:"Cabbage", quant:23
         }, {
-            id:3, myName:"Jerry", age:14
+            id:3, myName:"Salt", quant:14
         }
     ]
 
@@ -33,8 +33,8 @@ const UseStateArray = () => {
             myArray.map((curEle) => {
                 return (
                     <h1 className="h1Style" key={curEle.id}> 
-                    Name: {curEle.myName}
-                    ,Age: {curEle.age}
+                    Bring {curEle.myName} 
+                    . of quantity {curEle.quant}
                     <button className="btnInner"
                             onClick={() =>removeElem(curEle.id)}>Remove</button></h1>
                 ); 
