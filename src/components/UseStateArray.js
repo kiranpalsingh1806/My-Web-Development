@@ -23,7 +23,8 @@ const UseStateArray = () => {
         <>
             {
                 myArray.map((curEle) => {
-                    return <h1 className="h1Style" key={curEle.id}> Name: {curEle.myName} , Age: {curEle.age}</h1>
+                    return <h1 className="h1Style" key={curEle.id}> Name: {curEle.myName}
+                     , Age: {curEle.age}</h1>
                 })
             }
             <button className="btn" onClick ={clearArray} >Clear </button>
