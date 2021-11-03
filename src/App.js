@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
-import UseStateArray from './components/UseStateArray';
-import UseStateObject from './components/UseStateObject';
+import Shortcircuiteval from './components/ShortCircuitEval';
 
 const App = () => {
   return (
     <div>
-      <UseStateArray/>
+      <Shortcircuiteval/>
     </div>
   );
 }

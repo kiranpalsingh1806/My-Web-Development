@@ -36,7 +36,8 @@ const UseStateArray = () => {
                     Bring {curEle.myName} 
                     . of quantity {curEle.quant}
                     <button className="btnInner"
-                            onClick={() =>removeElem(curEle.id)}>Remove</button></h1>
+                            onClick={() =>removeElem(curEle.id)}>Remove</button>
+                            </h1>
                 ); 
             })
         }
