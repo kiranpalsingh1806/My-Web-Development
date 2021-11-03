@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
-import Shortcircuiteval from './components/ShortCircuitEval';
+import Basicform from './components/Forms/BasicForm';
 
 const App = () => {
   return (
-    <div>
-      <Shortcircuiteval/>
-    </div>
+    <Basicform/>
   );
 }
 
