@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const Shortcircuiteval = () => {
-    const [demo, setdemo] = useState("Kiranpal");
+    const [demo, setdemo] = useState("");
 
     return (
         <div>
@@ -17,3 +17,4 @@ const Shortcircuiteval = () => {
 }
 
 export default Shortcircuiteval;
+
