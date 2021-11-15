@@ -10,7 +10,7 @@ const Useeffect1 = () => {
         } else {
             document.title = `Chats `
         }       
-    });
+    },[count]);
 
     console.log("Hello  outside UseEffect");
     return (
