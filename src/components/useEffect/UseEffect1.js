@@ -5,8 +5,13 @@ const Useeffect1 = () => {
     const [count, setcount] = useState(0);
 
     useEffect(() => {
+        if(count >= 1) {
             document.title = `Chats (${count})`
+        } else {
+            document.title = `Chats `
+        }       
     });
+
     console.log("Hello  outside UseEffect");
     return (
         <div>
