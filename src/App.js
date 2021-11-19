@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
-import Useeffect1 from './components/useEffect/UseEffect1';
+import Useeffect2 from './components/useEffect/UseEffect2';
 
 const App = () => {
   return (
-    <Useeffect1/>
+    <Useeffect2/>
   );
 }
 
