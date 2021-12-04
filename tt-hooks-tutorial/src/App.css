@@ -1,4 +1,4 @@
-/* html {
+ html {
   font-size: 62.5%;
 }
 body {
@@ -122,10 +122,10 @@ button[type]:hover {
 }
 .showDataStyle p:first-child {
   font-weight: bold;
-} */
+}
 
 body {
-  background-color: #b3e5fc;
+  background-color: #2d5d74;
   border-radius: 10px;
   font-family: "Raleway", sans-serif;
 }

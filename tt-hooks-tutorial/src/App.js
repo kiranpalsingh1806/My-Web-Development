@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
-import UseeffectAPI from './components/useEffect/UseEffectAPI';
+import Uncontrolled from './components/Forms/Uncontrolled';
 
 const App = () => {
   return (
-    <UseeffectAPI/>
+    <Uncontrolled/>
   );
 }
 export default App;
