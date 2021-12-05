@@ -1,4 +1,4 @@
- html {
+ /* html {
   font-size: 62.5%;
 }
 body {
@@ -128,7 +128,7 @@ body {
   background-color: #2d5d74;
   border-radius: 10px;
   font-family: "Raleway", sans-serif;
-}
+/* } */
 
 h2 {
   text-align: center;
@@ -137,7 +137,6 @@ h2 {
 
 .textLeft {
   text-align: left;
-  margin-left: ;
 }
 
 .textCenter {
