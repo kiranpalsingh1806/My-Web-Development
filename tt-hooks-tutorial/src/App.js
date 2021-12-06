@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
-import Uncontrolled from './components/Forms/Uncontrolled';
-import UseEffectAPI from './components/useEffect/UseEffectAPI';
+import Usereducer from './components/useReducer/UseReducer';
 
 const App = () => {
   return (
-    <UseEffectAPI />
+    <Usereducer />
   );
 }
 export default App;
