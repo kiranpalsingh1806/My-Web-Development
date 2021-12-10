@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
-import ComA from './components/UseContext/ComA';
+import Useeffect1 from './components/useEffect/UseEffect1';
 
 const App = () => {
   return (
-    <ComA />
+    <Useeffect1 />
   );
 }
 
