@@ -1,12 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import Useeffect1 from './components/useEffect/UseEffect1';
+import Home from './components/React-Router-DOM/home';
 
 const App = () => {
-  return (
-    <Useeffect1 />
-  );
-}
+  return (< Home/>)
+} 
 
-export default App;
-
+export default App

@@ -1,7 +1,7 @@
 import React from 'react'
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation, useHistory} from "react-router-dom";
 
-const Index = () => {
+const About = () => {
     const location = useLocation();
     const history = useHistory();
 
@@ -9,11 +9,10 @@ const Index = () => {
         <div>
             <h1>Hello {location.pathname.replace("/", '')} page</h1>
             {
-                location.pathname === '/about/thapa' ? 
-                    <p>Hii, Thapa Good to see you again</p> : 
+                location.pathname === '/about/Kiranpal' ? 
+                    <p>Hello Kiranpal. Good to see you again</p> : 
                     <p>Login to see your files</p>
             }
-
             <button className="btn btn-primary"
             onClick={() => history.push('/index')}>
                 Home Page
@@ -23,4 +22,4 @@ const Index = () => {
     )
 }
 
-export default Index
+export default About

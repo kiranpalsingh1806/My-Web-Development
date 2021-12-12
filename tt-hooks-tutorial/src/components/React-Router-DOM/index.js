@@ -9,13 +9,11 @@ const Index = () => {
     return (
         <div>
             <h1>Hello {location.pathname.replace("/", '')} page</h1>
-            <button className="btn-primary btn"
-                onClick={history.goBack}
-            >
+            <button className="btn-primary btn"onClick={history.goBack}>
                 Go Back
             </button>
         </div>
     )
 }
 
-export default Index
+export default Index;

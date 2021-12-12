@@ -1,36 +1,43 @@
 html {
-  font-size: 62.5%;
+  font-size: 80.5%;
 }
+
 body {
   min-height: 100vh;
   width: 100vw;
   background-color: #34495e;
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; */
   color: aliceblue;
   font-family: "Raleway", sans-serif;
 }
+
 .App {
   text-align: center;
 }
+
 .App-link {
   color: #8be3fb;
 }
-div {
+
+/* div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
+} */
+
 p {
   font-size: 4rem;
 }
+
 h1 {
   font-size: 7rem;
   text-transform: capitalize;
 }
+
 .h1style {
   min-width: 20rem;
   width: 60rem;
@@ -42,6 +49,7 @@ h1 {
   margin-top: 2rem;
   text-align: center;
 }
+
 .btn,
 .btnInner {
   margin: auto;
@@ -55,15 +63,18 @@ h1 {
   border-radius: 1rem;
   font-size: 3rem;
 }
+
 .btnInner {
   background-color: #d12b54;
   padding: 0.7rem 1.5rem;
   font-size: 1.5rem;
   margin-left: 4rem;
 }
-.btn:hover {
+
+/* .btn:hover {
   background-color: #136ca7;
-}
+} */
+
 form {
   background: cornflowerblue;
   padding: 2rem;
@@ -71,12 +82,14 @@ form {
   outline: none;
   text-align: left;
 }
+
 form label {
   margin-top: 2rem;
   font-size: 1.5rem;
   text-align: left;
   text-transform: capitalize;
 }
+
 form input {
   min-width: 20rem;
   height: 2rem;
@@ -88,6 +101,7 @@ form input {
   padding: 0.5rem;
   outline: none;
 }
+
 button[type] {
   border: none;
   padding: 0.4rem 1rem;
@@ -98,10 +112,12 @@ button[type] {
   cursor: pointer;
   outline: none;
 }
+
 button[type]:hover {
   background-color: darkblue;
   color: aliceblue;
 }
+
 .showDataStyle {
   min-width: 20rem;
   width: 60rem;
@@ -117,74 +133,65 @@ button[type]:hover {
   border-radius: 1rem;
   box-shadow: 0 1rem 1rem -0.8rem rgba(0, 0, 0, 0.5);
 }
+
 .showDataStyle p {
   font-size: 1.5rem;
 }
+
 .showDataStyle p:first-child {
   font-weight: bold;
 }
 
-body {
-  background-color: #2d5d74;
+/* body {
+  background-color: #b3e5fc;
   border-radius: 10px;
   font-family: "Raleway", sans-serif;
 }
-
 h2 {
   text-align: center;
   margin: 20px 0;
 }
-
 .textLeft {
   text-align: left;
 }
-
-.textCenter {
-  text-align: center;
-  padding-top: 100px;
+.loadingDiv {
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
-
 .card {
-  width: 400px;
+  width: 450px;
   border: none;
   border-radius: 10px;
   background-color: #fff;
   margin: auto;
 }
-
 .image {
   min-width: 155px;
   margin-right: 20px;
 }
-
 .stats {
   background: #f2f5f8 !important;
   color: #000 !important;
 }
-
 .articles {
   font-size: 10px;
   color: #a1aab9;
 }
-
 .number1 {
   font-weight: 500;
 }
-
 .followers {
   font-size: 10px;
   color: #a1aab9;
 }
-
 .number2 {
   font-weight: 500;
 }
-
 .rating {
   font-size: 10px;
   color: #a1aab9;
 }
-
 .number3 {
   font-weight: 500;
-}
+} */
