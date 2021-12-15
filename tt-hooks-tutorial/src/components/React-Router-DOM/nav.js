@@ -18,6 +18,9 @@ const Nav = () => {
       <li className="nav-item">
         <NavLink className="nav-link" to="/about">About</NavLink>
       </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/login">Login</NavLink>
+      </li>
       <li className="nav-item dropdown">
         <NavLink className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
