@@ -4,8 +4,6 @@ mongoose.connect("mongodb://localhost:27017/kiranpaldb1")
     .then(() => console.log("Connection is successful.."))
     .catch((err) => console.log(err));
 
-// Creating Mongoose Schema 
-
 const playlistSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -21,21 +19,43 @@ const playlistSchema = new mongoose.Schema({
     }
 })
 
-// Mongoose Model - Creating Collection
-
 const Playlist = new mongoose.model("Playlist", playlistSchema);
 
 const createDocument = async () => {
     try {
-        const reactPlaylist = new Playlist({
-            name: "Node JS",
-            ctype: "Back End",
-            videos: 60,
+        const jsPlaylist = new Playlist({
+            name: "Java Script",
+            ctype: "Front End",
+            videos: 150,
             author: "Kiranpal Singh",
             active: true
         })
 
-        const result = await reactPlaylist.save();
+        const mongoPlaylist = new Playlist({
+            name: "Mongo DB",
+            ctype: "Database",
+            videos: 66,
+            author: "Kiranpal Singh",
+            active: true
+        })
+
+        const mongoosePlaylist = new Playlist({
+            name: "Mongoose",
+            ctype: "Database",
+            videos: 10,
+            author: "Kiranpal Singh",
+            active: true
+        })
+
+        const expressPlaylist = new Playlist({
+            name: "Express",
+            ctype: "Database",
+            videos: 20,
+            author: "Kiranpal Singh",
+            active: true
+        })
+
+        const result = await Playlist.insertMany([jsPlaylist, mongoPlaylist, mongoosePlaylist, expressPlaylist]);
         console.log(result);
     } catch {
         console.log(err);
