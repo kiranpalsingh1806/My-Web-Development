@@ -62,4 +62,48 @@ const createDocument = async () => {
     }
 }
 
-createDocument();
+// createDocument();
+
+const getDocument = async () => {
+    try {
+        const result = await Playlist
+            .find({ videos: { $gt: 50 } })
+            .select({ name: 1 });
+        console.log("Comparison Query Operators");
+        console.log(result);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+const getDocument2 = async () => {
+    try {
+        const result = await Playlist
+            .find({ ctype: { $in: ["Back End", "Database"] } })
+            .select({ name: 1 });
+        console.log("Comparison Query Operators");
+        console.log(result);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+const getDocument3 = async () => {
+    try {
+        const result = await Playlist
+            .find({
+                $or: [
+                    { ctype: "Database" },
+                    { author: "Kiranpal Singh" }]
+            })
+            .select({ name: 1 });
+        console.log("Logical Query Operators");
+        console.log(result);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+getDocument();
+getDocument2();
+getDocument3();
