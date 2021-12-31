@@ -104,6 +104,63 @@ const getDocument3 = async () => {
     }
 }
 
-getDocument();
-getDocument2();
-getDocument3();
+const countMongoose = async () => {
+    try {
+        const result = await Playlist
+            .find({
+                $or: [
+                    { ctype: "Database" },
+                    { author: "Kiranpal Singh" }]
+            })
+            .select({ name: 1 })
+            .count();
+        console.log("Count Query Method");
+        console.log(result);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+const sortMongoose = async () => {
+    try {
+        const result = await Playlist
+            .find({
+                $or: [
+                    { ctype: "Database" },
+                    { author: "Kiranpal Singh" }]
+            })
+            .select({ name: 1 })
+            .sort({
+                name: -1
+            });
+        console.log("Sorting Query Method (-1, 1)");
+        console.log(result);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+// getDocument();
+// getDocument2();
+// getDocument3();
+// countMongoose();
+// sortMongoose();
+
+const updateDocument = async (_id) => {
+    try {
+        const result = await Playlist.updateOne({ _id }, {
+            $set: {
+                name: "Javascript Language"
+            }
+        });
+        console.log(result);
+    } catch (err) {
+        console.log(err);
+    }
+
+}
+
+updateDocument("61c7d89419b1086b5b30149c");
+
+
+
