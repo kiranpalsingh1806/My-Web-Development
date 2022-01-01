@@ -7,9 +7,18 @@ mongoose.connect("mongodb://localhost:27017/kiranpaldb1")
 const playlistSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true,
+        uppercase: true,
+        minlength: [2, "Please enter name with more than two letters"],
+        maxlength: 30
     },
-    ctype: String,
+    ctype: {
+        type: String,
+        required: true,
+        lowercase: true,
+        enum: ["frontend", "backend", "database"]
+    },
     videos: Number,
     author: String,
     active: Boolean,
@@ -23,46 +32,46 @@ const Playlist = new mongoose.model("Playlist", playlistSchema);
 
 const createDocument = async () => {
     try {
-        const jsPlaylist = new Playlist({
-            name: "Java Script",
-            ctype: "Front End",
-            videos: 150,
-            author: "Kiranpal Singh",
-            active: true
-        })
+        // const jsPlaylist = new Playlist({
+        //     name: "Java Script",
+        //     ctype: "Front End",
+        //     videos: 150,
+        //     author: "Kiranpal Singh",
+        //     active: true
+        // })
 
-        const mongoPlaylist = new Playlist({
-            name: "Mongo DB",
-            ctype: "Database",
-            videos: 66,
-            author: "Kiranpal Singh",
-            active: true
-        })
+        // const mongoPlaylist = new Playlist({
+        //     name: "Mongo DB",
+        //     ctype: "Database",
+        //     videos: 66,
+        //     author: "Kiranpal Singh",
+        //     active: true
+        // })
 
-        const mongoosePlaylist = new Playlist({
-            name: "Mongoose",
-            ctype: "Database",
-            videos: 10,
-            author: "Kiranpal Singh",
-            active: true
-        })
+        // const mongoosePlaylist = new Playlist({
+        //     name: "Mongoose",
+        //     ctype: "Database",
+        //     videos: 10,
+        //     author: "Kiranpal Singh",
+        //     active: true
+        // })
 
-        const expressPlaylist = new Playlist({
-            name: "Express",
-            ctype: "Database",
+        const newPlaylist = new Playlist({
+            name: "Express Lang JS",
+            ctype: "UIUX",
             videos: 20,
             author: "Kiranpal Singh",
             active: true
         })
 
-        const result = await Playlist.insertMany([jsPlaylist, mongoPlaylist, mongoosePlaylist, expressPlaylist]);
+        const result = await Playlist.insertMany([newPlaylist]);
         console.log(result);
-    } catch {
+    } catch (err) {
         console.log(err);
     }
 }
 
-// createDocument();
+createDocument();
 
 const getDocument = async () => {
     try {
@@ -160,7 +169,32 @@ const updateDocument = async (_id) => {
 
 }
 
-updateDocument("61c7d89419b1086b5b30149c");
+// updateDocument("61c7d89419b1086b5b30149c");
+
+const deleteDocument = async (_id) => {
+    try {
+        const result = await Playlist.deleteOne({ _id });
+        console.log("Deleting document in Mongoose");
+        console.log(result);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+// deleteDocument("61c7d89419b1086b5b30149d");
+
+const deleteDocument2 = async (_id) => {
+    try {
+        const result = await Playlist.findByIdAndDelete({ _id });
+        console.log("Deleting document in Mongoose");
+        console.log(result);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+// deleteDocument2("61c527976404944bb1695f63");
+
 
 
 
