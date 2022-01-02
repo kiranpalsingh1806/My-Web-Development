@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const validator = require("validator");
 
 mongoose.connect("mongodb://localhost:27017/kiranpaldb1")
     .then(() => console.log("Connection is successful.."))
@@ -19,8 +20,32 @@ const playlistSchema = new mongoose.Schema({
         lowercase: true,
         enum: ["frontend", "backend", "database"]
     },
-    videos: Number,
+    videos: {
+        type: Number,
+
+        validate(value) {
+            if (value < 0) {
+                throw new Error("Videos count cannot be less than zero.")
+            }
+        },
+        // validate: {
+        //     validator: function (value) {
+        //         return value.length < 0
+        //     },
+        //     message: "Videos Count cannot be non negative."
+        // }
+    },
     author: String,
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+        validate(value) {
+            if (!validator.isEmail(value)) {
+                throw new Error("Email is invalid. Please enter a valid one.");
+            }
+        }
+    },
     active: Boolean,
     date: {
         type: Date,
@@ -57,10 +82,11 @@ const createDocument = async () => {
         // })
 
         const newPlaylist = new Playlist({
-            name: "Express Lang JS",
-            ctype: "UIUX",
-            videos: 20,
+            name: "Mongoose LANG",
+            ctype: "database",
+            videos: 100,
             author: "Kiranpal Singh",
+            email: "kiranpal.yu@go",
             active: true
         })
 
