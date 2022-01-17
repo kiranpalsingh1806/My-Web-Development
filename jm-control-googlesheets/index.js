@@ -3,8 +3,15 @@ const express = require("express");
 const { google } = require("googleapis");
 
 const app = express();
+app.set("view engine", "ejs");
+app.use(express.urlencoded({ extended: true }));
 
-app.get("/", async (req, res) => {
+app.get('/', (req, res) => {
+    res.render("index");
+})
+
+app.post("/", async (req, res) => {
+    const { request, name } = req.body;
 
     const auth = new google.auth.GoogleAuth({
         keyFile: "credentials.json",
@@ -46,16 +53,13 @@ app.get("/", async (req, res) => {
         resource: {
             values: [
                 [
-                    "Make a tutorial 1", "test"
+                    request, name
                 ],
-                [
-                    "Make a tutorial 2", "test2"
-                ]
             ],
         }
     });
 
-    res.send(getRows.data);
+    res.send("Successfully Submitted. Thankyou !!!!");
 });
 
 app.listen(1337, (req, res) => {
