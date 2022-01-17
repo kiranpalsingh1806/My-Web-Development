@@ -1,0 +1,8 @@
+---
+title: Mi portfolio
+section: projects-items-freelance
+picture: /images/portfolio.jpg
+text: Para mi portafolio utilicé Jekyll, particleJS y Gulp. El primero es un generador de sitios estáticos escrito en Ruby. ParticleJS es la librería que genera las partículas de la sección principal. Y Gulp es un gestor de tareas que utilicé para minificar los estilos y scripts utilizados en el sitio.
+link: //github.com/maxi7587/angular-auto-import
+link_text: Mi portafolio
+---

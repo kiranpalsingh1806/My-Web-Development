@@ -1,0 +1,8 @@
+---
+title: URL Shortener Microservice
+section: projects-items-freelance
+picture: /images/url-shortener-microservice.jpg
+text: Este acortador de URLs es un microservicio desarrollado en NodeJS, utilizando Express y MongoDB.
+link: //github.com/maxi7587/URL-Shortener-Microservice
+link_text: URL Shortener Microservice
+---

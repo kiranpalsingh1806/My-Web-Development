@@ -1,0 +1,36 @@
+<div id="experience" class="background-alt">
+    <!-- had t ouse if... else because object variable access via page.lang is not working fine -->
+    {% if page.lang == "es" %}
+        {% assign site_lang = site["es"] %}
+    {% else if page.lang == "en" %}
+        {% assign site_lang = site["en"] %}
+    {% endif %}
+    {% assign experience = site_lang | where:"section", "experience" | first %}
+    <h2 class="heading">{{ experience.title }}</h2>
+    <div id="experience-timeline">
+        {% assign experience_items = site_lang | where:"section", "experience-items" | sort: "order" | reverse %}
+        {% for item in experience_items %}
+        <div data-date="{{ item.date }}">
+            <h3>{{ item.title }}</h3>
+            <h4>{{ item.subtitle }}</h4>
+            <p>{{ item.text }}</p>
+        </div>
+        {% endfor %}
+
+        <!-- <div data-date="September 2015 – September 2016">
+            <h3>Employer Name</h3>
+            <h4>Job Title</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+            </p>
+        </div>
+
+        <div data-date="September 2015 – September 2016">
+            <h3>Employer Name</h3>
+            <h4>Job Title</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+            </p>
+        </div> -->
+    </div>
+</div>

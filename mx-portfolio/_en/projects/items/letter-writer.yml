@@ -1,0 +1,8 @@
+---
+title: Letter Writer
+section: projects-items-freelance
+picture: /images/letter-writer.jpg
+text: Letter Writer is a web app develped for a legal firm. It writes automatic .doc letters based on a specially formatted Excel sheet so they can be printed using Word, LibreOffice Writer or any other compatible software.
+link: //maxi7587.github.io/letter-writer/
+link_text: Letter Writer
+---

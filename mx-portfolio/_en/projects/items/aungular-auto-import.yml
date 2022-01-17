@@ -1,0 +1,8 @@
+---
+title: Angular Auto Import (Atom package, deprecated)
+section: projects-items-freelance
+picture: /images/angular-auto-import.jpg
+text: Angular auto import is an Atom package (I commonly use this IDE for my Front End projects). Actually, it's deprecated, as atom-typescript package incorporated a similar functionality.
+link: //github.com/maxi7587/angular-auto-import
+link_text: Angular Auto Import
+---

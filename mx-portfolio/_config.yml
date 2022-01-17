@@ -1,0 +1,28 @@
+name: Maximiliano Cruz | Portfolio
+baseurl: /portfolio
+
+defaults:
+    - scope:
+        path: _en
+        type: en
+      values:
+        layout: default
+        permalink: /en
+        sectionid: en
+
+    - scope:
+        path: _es
+        type: es
+      values:
+        layout: default
+        permalink: /es
+        sectionid: es
+
+collections:
+    en:
+    es:
+        output: true
+
+strict_front_matter: true
+liquid:
+  error_mode: strict

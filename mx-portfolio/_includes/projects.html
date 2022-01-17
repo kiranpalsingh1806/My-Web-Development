@@ -1,0 +1,26 @@
+<div id="projects" class="background-alt">
+    {% assign projects = site[page.lang] | where:"section", "projects" %}
+    {% for project in projects %}
+    <h2 class="heading">{{ project.title }}</h2>
+    <div class="container">
+        <div class="row">
+            {% assign projects_items = site[page.lang] | where:"section", project.items %}
+            {% for item in projects_items %}
+            <div class="project shadow-large">
+                <div class="project-image">
+                    <img src="{{ site.baseurl }}{{ item.picture }}" />
+                </div>
+                <!-- End .project-image -->
+                <div class="project-info">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.text }}</p>
+                    <a href="{{ item.link }}" target="_blank">Visitar {{ item.link_text }}</a>
+                </div>
+                <!-- End .project-info -->
+            </div>
+            {% endfor %}
+            <!-- End .project -->
+        </div>
+    </div>
+    {% endfor %}
+</div>

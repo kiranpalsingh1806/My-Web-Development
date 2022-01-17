@@ -1,0 +1,8 @@
+---
+title: Demeter (in developement)
+section: projects-items-freelance
+picture: /images/demeter.png
+text: Rural projects management web app. Demeter is a two person project in wich my responsibilities are developing a REST API in Django REST Framework, Front End using Angular and deployment in Heroku and Python Anywhere.
+link: //demeter-app.herokuapp.com
+link_text: Demeter
+---

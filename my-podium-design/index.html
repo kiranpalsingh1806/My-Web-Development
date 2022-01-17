@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header {
+            background-color: rgb(88, 86, 86);
+            color: honeydew;
+            font-size: 30px;
+            text-align: center;
+            padding: 5px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .mainDiv {
+            position: relative;
+        }
+
+        #podiumImg {
+            height: 150px;
+            width: 300px;
+            margin-top: 0px;
+        }
+
+        #manImg {
+            height: 200px;
+            width: 100px;
+        }
+
+        .manDiv {
+            display: flex;
+            justify-content: center;
+        }
+
+        #podiumDiv {
+            display: flex;
+            justify-content: center;
+            background-color: "red";
+            transform: translateY(-30px);
+        }
+
+        @media (max-width: 700px) {
+            #podiumImg {
+                height: 300px;
+                width: 450px;
+            }
+
+            #manImg {
+                height: 140px;
+                width: 70px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .flex-item-1 {
+            background-color: #f1f1f1;
+            padding: 10px;
+            flex: 25%;
+        }
+
+        .flex-item-2 {
+            background-color: dodgerblue;
+            padding: 10px;
+            flex: 25%;
+        }
+
+        .flex-item-3 {
+            background-color: #f6f5a2;
+            padding: 10px;
+            flex: 25%;
+        }
+
+        .flex-item-4 {
+            background-color: #f2b2c3;
+            padding: 10px;
+            flex: 25%;
+        }
+
+        @media (max-width : 1000px) {
+
+            .flex-item-1,
+            .flex-item-2,
+            .flex-item-3,
+            .flex-item-4 {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        Leaderboard
+    </header>
+
+
+    <div class="flex-container">
+        <div class="flex-item-1">
+            <div class="mainDiv">
+                <div class="manDiv">
+                    <img id="manImg" src="man.png">
+                </div>
+                <p>Second Place</p>
+            </div>
+        </div>
+        <div class="flex-item-2">
+            <div class="mainDiv">
+                <div class="manDiv">
+                    <img id="manImg" src="man.png">
+                </div>
+                <p>First Place</p>
+            </div>
+        </div>
+        <div class="flex-item-3">
+            <div class="mainDiv">
+                <div class="manDiv">
+                    <img id="manImg" src="man.png">
+                </div>
+                <p>Third Place</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

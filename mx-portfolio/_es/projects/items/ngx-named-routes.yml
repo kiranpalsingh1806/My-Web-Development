@@ -1,0 +1,8 @@
+---
+title: NGX Named Routes
+section: projects-items-freelance
+picture: /images/ngx-named-routes.png
+text: Se trata de una librería para Angular que permite asignar nombres a las rutas, para luego utilizarlas por su nombre en lugar de escribir la ruta completa.
+link: //github.com/maxi7587/ngx-named-routes
+link_text: NGX Named Routes
+---

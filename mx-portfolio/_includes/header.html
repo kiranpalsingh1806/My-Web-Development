@@ -1,0 +1,62 @@
+<div id="mobile-menu-open" class="shadow-large">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+</div>
+<!-- End #mobile-menu-toggle -->
+
+{% assign header = site[page.lang] | where:"section", "header" | first %}
+<header>
+    <div id="mobile-menu-close">
+        <span>{{ header.menu_close }}</span> <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    {% assign header_items = site[page.lang] | where:"section", "header-items" | sort: "order" %}
+    <ul id="menu" class="shadow">
+        <li>
+            {% if page.lang == "es" %}
+            <a href="{{ site.baseurl }}/en" class="no-scroll"><i class="fa fa-language" aria-hidden="true"></i> EN</a>
+            {% else if page.lang == "en" %}
+            <a href="{{ site.baseurl }}/es" class="no-scroll"><i class="fa fa-language" aria-hidden="true"></i> ES</a>
+            {% endif %}
+        </li>
+        {% for item in header_items %}
+        <li>
+            {% if item.scroll == true %}
+            <a href="{{ item.link }}">{{ item.link_text }}</a>
+            {% else if item.new_page %}
+            <a href="{{ item.link }}" class="no-scroll" target="_blank">{{ item.link_text }}</a>
+            {% else %}
+            <a href="{{ item.link }}" class="no-scroll">{{ item.link_text }}</a>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</header>
+<!-- End header -->
+
+<div id="lead">
+
+    <div id="lead-content">
+        <h1>{{ header.name }}</h1>
+        <h2>{{ header.job_title }}</h2>
+        <span>
+            <a href="https://github.com/maxi7587" target="_blank" style="padding: 10px"><i class="fa fa-github fa-3x" style="color: white" aria-hidden="true"></i></a>
+            <a href="https://stackoverflow.com/users/8431934/maximiliano-cruz" target="_blank" style="padding: 10px"><i class="fa fa-stack-overflow fa-3x" style="color: white" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/maximiliano-cruz-990a8777/" target="_blank" style="padding: 10px"><i class="fa fa-linkedin fa-3x" style="color: white" aria-hidden="true"></i></a>
+            <a href="https://wa.me/5492604332205" target="_blank" style="padding: 10px"><i class="fa fa-whatsapp fa-3x" style="color: white" aria-hidden="true"></i></a>
+            <a href="{{ header.resume_link }}" target="_blank" style="padding: 10px"><i class="fa fa-file-pdf-o fa-3x" style="color: white" aria-hidden="true"></i></a>
+        </span>
+        <!-- <a href="{{ header.resume_link }}" class="btn-rounded-white">{{ header.resume_link_text }}</a> -->
+    </div>
+    <!-- End #lead-content -->
+
+    <div id="lead-overlay">
+        <div id="particles-js" style="height: 100%; width: 100%"></div>
+    </div>
+
+    <div id="lead-down">
+        <span>
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </span>
+    </div>
+    <!-- End #lead-down -->
+</div>
+<!-- End #lead -->

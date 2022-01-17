@@ -1,0 +1,8 @@
+---
+title: Mi portfolio
+section: projects-items-freelance
+picture: /images/portfolio.jpg
+text: My Portfolio was developed using Jekyll, particleJS and Gulp. The first one is a static site generator written in Ruby. ParticleJS is a Javascript library that creates the moving particles of the main section. And Gulp the task mananger used to uglify the styles and JS files used in the site.
+link: //github.com/maxi7587/angular-auto-import
+link_text: My Portfolio
+---

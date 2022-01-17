@@ -1,0 +1,8 @@
+---
+title: Nanobox autodeploy (Reyesoft)
+section: projects-items-reyesoft
+picture: /images/nanobox-autodeploy.png
+text: Se trata de un Bash script que deploya automáticamente en Nanobox cada vez que se incorpora un commit nuevo en la/las ramas seleccionadas.
+link: //github.com/reyesoft/nanobox-autodeploy
+link_text: Nanobox autodeploy
+---

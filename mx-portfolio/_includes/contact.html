@@ -1,0 +1,12 @@
+<div id="contact">
+    {% assign contact = site[page.lang] | where:"section", "contact" | first %}
+    <h2>{{ contact.title }}</h2>
+    <div id="contact-form">
+        <form method="POST" action="https://formspree.io/maxi7587@hotmail.com">
+            <input type="hidden" name="_subject" value="{{ contact.subject }}" />
+            <input type="email" name="_replyto" placeholder="{{ contact.replyto }}" required>
+            <textarea name="message" placeholder="{{ contact.message }}" required></textarea>
+            <button type="submit">{{ contact.submit }}</button>
+        </form>
+    </div>
+</div>
